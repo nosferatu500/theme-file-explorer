@@ -8,7 +8,7 @@ const target = process.env.TARGET || 'umd';
 
 const styleLoader = {
   loader: 'style-loader',
-  options: { insertAt: 'top' },
+  options: { insert: 'head' },
 };
 
 const fileLoader = {
@@ -19,7 +19,7 @@ const fileLoader = {
 const postcssLoader = {
   loader: 'postcss-loader',
   options: {
-    plugins: () => [
+    postcssOptions: () => [
       autoprefixer({ browsers: ['IE >= 9', 'last 2 versions', '> 1%'] }),
     ],
   },
@@ -36,6 +36,7 @@ const cssLoader = isLocal => ({
 });
 
 const config = {
+  mode: 'development',
   entry: './index',
   output: {
     path: path.join(__dirname, 'dist'),
@@ -46,15 +47,6 @@ const config = {
   devtool: 'source-map',
   plugins: [
     new webpack.EnvironmentPlugin({ NODE_ENV: 'development' }),
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-      },
-      mangle: false,
-      beautify: true,
-      comments: true,
-    }),
   ],
   module: {
     rules: [
@@ -83,7 +75,7 @@ switch (target) {
     config.externals = [
       nodeExternals({
         // load non-javascript files with extensions, presumably via loaders
-        whitelist: [/\.(?!(?:jsx?|json)$).{1,5}$/i],
+        allowlist: [/\.(?!(?:jsx?|json)$).{1,5}$/i],
       }),
     ];
     break;
@@ -105,7 +97,6 @@ switch (target) {
         template: './demo/index.html',
       }),
       new webpack.EnvironmentPlugin({ NODE_ENV: 'development' }),
-      new webpack.NoEmitOnErrorsPlugin(),
     ];
     config.devServer = {
       contentBase: path.join(__dirname, 'build'),
@@ -131,11 +122,6 @@ switch (target) {
         template: './demo/index.html',
       }),
       new webpack.EnvironmentPlugin({ NODE_ENV: 'production' }),
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: false,
-        },
-      }),
     ];
 
     break;

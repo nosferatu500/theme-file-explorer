@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SortableTree, { toggleExpandedForAll } from 'react-sortable-tree';
+import SortableTree, { toggleExpandedForAll } from '@nosferatu500/react-sortable-tree';
 import FileExplorerTheme from '../index';
 import './app.css';
 
@@ -91,9 +91,9 @@ class App extends Component {
 
       global.alert(
         'Info passed to the icon and button generators:\n\n' +
-          `node: {\n   ${objectString}\n},\n` +
-          `path: [${path.join(', ')}],\n` +
-          `treeIndex: ${treeIndex}`
+        `node: {\n   ${objectString}\n},\n` +
+        `path: [${path.join(', ')}],\n` +
+        `treeIndex: ${treeIndex}`
       );
     };
 
@@ -184,35 +184,35 @@ class App extends Component {
             generateNodeProps={rowInfo => ({
               icons: rowInfo.node.isDirectory
                 ? [
-                    <div
-                      style={{
-                        borderLeft: 'solid 8px gray',
-                        borderBottom: 'solid 10px gray',
-                        marginRight: 10,
-                        boxSizing: 'border-box',
-                        width: 16,
-                        height: 12,
-                        filter: rowInfo.node.expanded
-                          ? 'drop-shadow(1px 0 0 gray) drop-shadow(0 1px 0 gray) drop-shadow(0 -1px 0 gray) drop-shadow(-1px 0 0 gray)'
-                          : 'none',
-                        borderColor: rowInfo.node.expanded ? 'white' : 'gray',
-                      }}
-                    />,
-                  ]
+                  <div
+                    style={{
+                      borderLeft: 'solid 8px gray',
+                      borderBottom: 'solid 10px gray',
+                      marginRight: 10,
+                      boxSizing: 'border-box',
+                      width: 16,
+                      height: 12,
+                      filter: rowInfo.node.expanded
+                        ? 'drop-shadow(1px 0 0 gray) drop-shadow(0 1px 0 gray) drop-shadow(0 -1px 0 gray) drop-shadow(-1px 0 0 gray)'
+                        : 'none',
+                      borderColor: rowInfo.node.expanded ? 'white' : 'gray',
+                    }}
+                  />,
+                ]
                 : [
-                    <div
-                      style={{
-                        border: 'solid 1px black',
-                        fontSize: 8,
-                        textAlign: 'center',
-                        marginRight: 10,
-                        width: 12,
-                        height: 16,
-                      }}
-                    >
-                      F
-                    </div>,
-                  ],
+                  <div
+                    style={{
+                      border: 'solid 1px black',
+                      fontSize: 8,
+                      textAlign: 'center',
+                      marginRight: 10,
+                      width: 12,
+                      height: 16,
+                    }}
+                  >
+                    F
+                  </div>,
+                ],
               buttons: [
                 <button
                   style={{
