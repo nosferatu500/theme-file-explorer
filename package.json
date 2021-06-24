@@ -1,6 +1,6 @@
 {
-  "name": "react-sortable-tree-theme-file-explorer",
-  "version": "2.0.0",
+  "name": "@nosferatu500/theme-file-explorer",
+  "version": "3.0.0",
   "description": "File explorer theme for react-sortable-tree",
   "scripts": {
     "build": "npm run clean && cross-env NODE_ENV=production TARGET=umd webpack --bail",
@@ -12,7 +12,7 @@
     "prettier": "prettier --single-quote --trailing-comma es5 --write \"**/*.{js,jsx,css,scss}\"",
     "prepublishOnly": "npm run lint && npm run test && npm run build",
     "test": "jest",
-    "dev": "cross-env NODE_ENV=demo webpack serve --mode development --env development"
+    "dev": "cross-env NODE_ENV=development TARGET=demo webpack serve --mode development --env development"
   },
   "main": "dist/main.js",
   "files": [
@@ -20,13 +20,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/frontend-collective/react-sortable-tree-theme-file-explorer"
+    "url": "https://github.com/frontend-collective/@nosferatu500/theme-file-explorer"
   },
-  "homepage": "https://github.com/frontend-collective/react-sortable-tree-theme-file-explorer",
-  "bugs": "https://github.com/frontend-collective/react-sortable-tree-theme-file-explorer/issues",
-  "authors": [
-    "Chris Fritz"
+  "homepage": "https://github.com/frontend-collective/@nosferatu500/theme-file-explorer",
+  "bugs": "https://github.com/frontend-collective/@nosferatu500/theme-file-explorer/issues",
+  "contributors": [
+    "Chris Fritz",
+    "Vitalii Shvetsov"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "jest": {
     "setupTestFrameworkScriptFile": "./node_modules/jest-enzyme/lib/index.js",

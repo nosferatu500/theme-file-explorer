@@ -10,13 +10,13 @@
 ## Usage
 
 ```sh
-npm install --save react-sortable-tree-theme-file-explorer
+npm install --save @nosferatu500/theme-file-explorer
 ```
 
 ```jsx
 import React, { Component } from 'react';
 import SortableTree from 'react-sortable-tree';
-import FileExplorerTheme from 'react-sortable-tree-theme-file-explorer';
+import FileExplorerTheme from '@nosferatu500/theme-file-explorer';
 
 export default class Tree extends Component {
   constructor(props) {
