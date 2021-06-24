@@ -4,7 +4,7 @@ const autoprefixer = require('autoprefixer');
 const nodeExternals = require('webpack-node-externals');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const target = process.env.TARGET || 'umd';
+const target = process.env.TARGET || 'demo';
 
 const styleLoader = {
   loader: 'style-loader',
@@ -28,10 +28,11 @@ const postcssLoader = {
 const cssLoader = isLocal => ({
   loader: 'css-loader',
   options: {
-    modules: true,
-    '-autoprefixer': true,
+    modules: {
+      localIdentName: isLocal ? 'rstcustom__[local]' : 'rstcustom__[local]',
+    },
+    // '-autoprefixer': true,
     importLoaders: true,
-    localIdentName: isLocal ? 'rstcustom__[local]' : null,
   },
 });
 

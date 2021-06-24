@@ -12,7 +12,7 @@
     "prettier": "prettier --single-quote --trailing-comma es5 --write \"**/*.{js,jsx,css,scss}\"",
     "prepublishOnly": "npm run lint && npm run test && npm run build",
     "test": "jest",
-    "dev": "cross-env NODE_ENV=development webpack serve --mode development --env development"
+    "dev": "cross-env NODE_ENV=demo webpack serve --mode development --env development"
   },
   "main": "dist/main.js",
   "files": [
@@ -52,8 +52,8 @@
   },
   "peerDependencies": {
     "@nosferatu500/react-sortable-tree": "^3.0.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@nosferatu500/react-sortable-tree": "^3.0.0",
@@ -65,8 +65,8 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "cross-env": "^5.2.1",
-    "css-loader": "^0.28.11",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.6",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^4.19.1",
@@ -85,11 +85,11 @@
     "node-sass": "^6.0.0",
     "postcss-loader": "^6.1.0",
     "prettier": "^1.19.1",
-    "react": "^16.14.0",
+    "react": "^17.0.2",
     "react-addons-shallow-compare": "^15.6.3",
     "react-dnd-test-backend": "^2.6.0",
     "react-dnd-touch-backend": "^0.3.21",
-    "react-dom": "^16.14.0",
+    "react-dom": "^17.0.2",
     "react-hot-loader": "^3.1.3",
     "react-test-renderer": "^16.14.0",
     "rimraf": "^2.7.1",
