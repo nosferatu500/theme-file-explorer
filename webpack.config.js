@@ -4,7 +4,7 @@ const autoprefixer = require('autoprefixer');
 const nodeExternals = require('webpack-node-externals');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const target = process.env.TARGET || 'umd';
+const target = process.env.TARGET || 'demo';
 
 const styleLoader = {
   loader: 'style-loader',
@@ -37,7 +37,7 @@ const cssLoader = isLocal => ({
 });
 
 const config = {
-  mode: 'development',
+  mode: 'production',
   entry: './index',
   output: {
     path: path.join(__dirname, 'dist'),
