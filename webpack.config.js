@@ -4,7 +4,7 @@ const autoprefixer = require('autoprefixer');
 const nodeExternals = require('webpack-node-externals');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const target = process.env.TARGET || 'demo';
+const target = process.env.TARGET || 'umd';
 
 const styleLoader = {
   loader: 'style-loader',
