@@ -1,17 +1,16 @@
 {
   "name": "@nosferatu500/theme-file-explorer",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "File explorer theme for react-sortable-tree",
   "scripts": {
-    "build": "npm run clean && cross-env NODE_ENV=production TARGET=umd webpack --bail",
-    "build:demo": "npm run clean:demo && cross-env NODE_ENV=production TARGET=demo webpack --bail",
+    "build": "npm run clean && cross-env NODE_ENV=production TARGET=umd webpack",
+    "build:demo": "npm run clean:demo && cross-env NODE_ENV=production TARGET=demo webpack",
     "clean": "rimraf dist",
     "clean:demo": "rimraf build",
-    "start": "cross-env NODE_ENV=development TARGET=development webpack-dev-server --inline --hot",
+    "start": "cross-env NODE_ENV=development TARGET=development webpack serve --inline --hot",
     "lint": "eslint .",
     "prettier": "prettier --single-quote --trailing-comma es5 --write \"**/*.{js,jsx,css,scss}\"",
-    "prepublishOnly": "npm run build",
-    "dev": "cross-env NODE_ENV=development TARGET=demo webpack serve --mode development --env development"
+    "prepublishOnly": "npm run build"
   },
   "main": "dist/main.js",
   "files": [
@@ -58,6 +57,7 @@
     "eslint-plugin-react": "^7.24.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^1.6.2",
     "node-sass": "^6.0.0",
     "postcss-loader": "^6.1.0",
     "prettier": "^1.19.1",
