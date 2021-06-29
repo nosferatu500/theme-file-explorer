@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const nodeExternals = require('webpack-node-externals');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const target = process.env.TARGET || 'umd';
 
@@ -59,13 +58,13 @@ const config = {
       },
       {
         test: /\.scss$/,
-        use: [process.env.NODE_ENV !== 'production' ? styleLoader : MiniCssExtractPlugin.loader, cssLoader(true), postcssLoader, 'sass-loader'],
+        use: [styleLoader, cssLoader(true), postcssLoader, 'sass-loader'],
         exclude: path.join(__dirname, 'node_modules'),
       },
       {
         // Used for importing css from external modules (react-virtualized, etc.)
         test: /\.css$/,
-        use: [process.env.NODE_ENV !== 'production' ? styleLoader : MiniCssExtractPlugin.loader, cssLoader(false), postcssLoader],
+        use: [styleLoader, cssLoader(false), postcssLoader],
       },
     ],
   },
@@ -79,11 +78,6 @@ switch (target) {
         // load non-javascript files with extensions, presumably via loaders
         allowlist: [/\.(?!(?:jsx?|json)$).{1,5}$/i],
       }),
-    ];
-    config.optimization.minimaze = true;
-    config.plugins = [
-      new MiniCssExtractPlugin(),
-      new webpack.EnvironmentPlugin({NODE_ENV: 'production'}),
     ];
     break;
   case 'development':
@@ -123,7 +117,6 @@ switch (target) {
       path: path.join(__dirname, 'build'),
       filename: 'static/[name].js',
     };
-    config.optimization.minimaze = true;
     config.plugins = [
       new HtmlWebpackPlugin({
         inject: true,
