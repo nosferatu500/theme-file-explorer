@@ -20,7 +20,7 @@ const postcssLoader = {
   loader: 'postcss-loader',
   options: {
     postcssOptions: () => [
-      autoprefixer({ browsers: ['IE >= 9', 'last 2 versions', '> 1%'] }),
+      autoprefixer(),
     ],
   },
 };

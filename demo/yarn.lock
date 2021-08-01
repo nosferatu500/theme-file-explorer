@@ -293,10 +293,10 @@
     react-lifecycles-compat "^3.0.4"
     react-virtualized "^9.22.3"
 
-"@nosferatu500/theme-file-explorer@^3.0.5":
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/@nosferatu500/theme-file-explorer/-/theme-file-explorer-3.0.5.tgz#35e8b148683c46ef74d02dbdcb8e8c089f758d3a"
-  integrity sha512-HSeN9Sf6/Wt4n7o2dMNlHtAWhzbzZphsX6imbiF50ZhWzzTxc6yNquMRBjAWUts5cMdMGGf2HQOavCQGFvZQFg==
+"@nosferatu500/theme-file-explorer@^3.0.6":
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/@nosferatu500/theme-file-explorer/-/theme-file-explorer-3.0.6.tgz#5367b19b3e5e75e10590c2a610b35ceac620c61d"
+  integrity sha512-3zbizYAzWtiH4WqH9BEZF8Lvll3D8xWHnD0GfuzypiihwEZMFlrYCi6cqhJ/C4szjAa3mrjUjTJ0VQBjNawYKg==
   dependencies:
     prop-types "^15.7.2"
     react-dnd "11.1.3"
