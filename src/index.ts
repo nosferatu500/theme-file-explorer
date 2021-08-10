@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 // Can override the following:
 //
 // style: PropTypes.shape({}),

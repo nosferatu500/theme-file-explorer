@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "target": "esnext",
+      "strict": true,
+      "jsx": "react-jsx",
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "baseUrl": ".",
+      "paths": {
+        "@nosferatu500/theme-file-explorer": [
+          "./src/index.ts"
+        ]
+      }
+    },
+    "include": [
+      "src/**/*"
+    ],
+    "exclude": [
+      "node_modules",
+      "dist"
+    ]
+  }
+  

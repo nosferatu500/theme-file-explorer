@@ -1,6 +1,8 @@
-import React, { Component, Children, cloneElement } from 'react';
-import PropTypes from 'prop-types';
-import styles from './tree-node-renderer.scss';
+// @ts-nocheck
+
+import React, { Component, Children, cloneElement } from 'react'
+import PropTypes from 'prop-types'
+import * as styles from './tree-node-renderer.scss'
 
 class FileThemeTreeNodeRenderer extends Component {
   render() {
@@ -23,11 +25,11 @@ class FileThemeTreeNodeRenderer extends Component {
       path, // Delete from otherProps
       rowDirection,
       ...otherProps
-    } = this.props;
+    } = this.props
 
     return connectDropTarget(
       <div {...otherProps} className={styles.node}>
-        {Children.map(children, child =>
+        {Children.map(children, (child) =>
           cloneElement(child, {
             isOver,
             canDrop,
@@ -40,7 +42,7 @@ class FileThemeTreeNodeRenderer extends Component {
           })
         )}
       </div>
-    );
+    )
   }
 }
 
@@ -50,7 +52,7 @@ FileThemeTreeNodeRenderer.defaultProps = {
   swapLength: null,
   canDrop: false,
   draggedNode: null,
-};
+}
 
 FileThemeTreeNodeRenderer.propTypes = {
   treeIndex: PropTypes.number.isRequired,
@@ -77,6 +79,6 @@ FileThemeTreeNodeRenderer.propTypes = {
     PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   ).isRequired,
   rowDirection: PropTypes.string.isRequired,
-};
+}
 
-export default FileThemeTreeNodeRenderer;
+export default FileThemeTreeNodeRenderer

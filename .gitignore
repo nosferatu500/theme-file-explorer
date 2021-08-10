@@ -12,6 +12,7 @@ cc-test-reporter
 *.sublime-*
 .idea/
 *.DS_Store
+*.log
 
 # Build directories (Will be preserved by npm)
 dist

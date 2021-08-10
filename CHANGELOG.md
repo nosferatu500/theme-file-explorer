@@ -1,5 +1,10 @@
 # Change Log
 
+## 4.0.0-alpha.0
+* Migrate to Rollup.
+* Start migration to TS.
+* Bump deps.
+
 ## 3.0.4
 * Bump deps.
 

@@ -1,16 +1,18 @@
+// @ts-nocheck
+
 /* eslint-disable react/prop-types */
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import styles from './node-content-renderer.scss';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import * as styles from './node-content-renderer.scss'
 
 function isDescendant(older, younger) {
   return (
     !!older.children &&
     typeof older.children !== 'function' &&
     older.children.some(
-      child => child === younger || isDescendant(child, younger)
+      (child) => child === younger || isDescendant(child, younger)
     )
-  );
+  )
 }
 
 // eslint-disable-next-line react/prefer-stateless-function
@@ -46,14 +48,14 @@ class FileThemeNodeContentRenderer extends Component {
       parentNode, // Needed for dndManager
       rowDirection,
       ...otherProps
-    } = this.props;
-    const nodeTitle = title || node.title;
+    } = this.props
+    const nodeTitle = title || node.title
 
-    const isDraggedDescendant = draggedNode && isDescendant(draggedNode, node);
-    const isLandingPadActive = !didDrop && isDragging;
+    const isDraggedDescendant = draggedNode && isDescendant(draggedNode, node)
+    const isLandingPadActive = !didDrop && isDragging
 
     // Construct the scaffold representing the structure of the tree
-    const scaffold = [];
+    const scaffold = []
     lowerSiblingCounts.forEach((lowerSiblingCount, i) => {
       scaffold.push(
         <div
@@ -61,23 +63,23 @@ class FileThemeNodeContentRenderer extends Component {
           style={{ width: scaffoldBlockPxWidth }}
           className={styles.lineBlock}
         />
-      );
+      )
 
       if (treeIndex !== listIndex && i === swapDepth) {
         // This row has been shifted, and is at the depth of
         // the line pointing to the new destination
-        let highlightLineClass = '';
+        let highlightLineClass = ''
 
         if (listIndex === swapFrom + swapLength - 1) {
           // This block is on the bottom (target) line
           // This block points at the target block (where the row will go when released)
-          highlightLineClass = styles.highlightBottomLeftCorner;
+          highlightLineClass = styles.highlightBottomLeftCorner
         } else if (treeIndex === swapFrom) {
           // This block is on the top (source) line
-          highlightLineClass = styles.highlightTopLeftCorner;
+          highlightLineClass = styles.highlightTopLeftCorner
         } else {
           // This block is between the bottom and top
-          highlightLineClass = styles.highlightLineVertical;
+          highlightLineClass = styles.highlightLineVertical
         }
 
         scaffold.push(
@@ -89,40 +91,37 @@ class FileThemeNodeContentRenderer extends Component {
             }}
             className={`${styles.absoluteLineBlock} ${highlightLineClass}`}
           />
-        );
+        )
       }
-    });
+    })
 
     const nodeContent = (
       <div style={{ height: '100%' }} {...otherProps}>
-        {toggleChildrenVisibility &&
-          node.children &&
-          node.children.length > 0 && (
-            <button
-              type="button"
-              aria-label={node.expanded ? 'Collapse' : 'Expand'}
-              className={
-                node.expanded ? styles.collapseButton : styles.expandButton
-              }
-              style={{
-                left: (lowerSiblingCounts.length - 0.7) * scaffoldBlockPxWidth,
-              }}
-              onClick={() =>
-                toggleChildrenVisibility({
-                  node,
-                  path,
-                  treeIndex,
-                })
-              }
-            />
-          )}
+        {toggleChildrenVisibility && node.children && node.children.length > 0 && (
+          <button
+            type="button"
+            aria-label={node.expanded ? 'Collapse' : 'Expand'}
+            className={
+              node.expanded ? styles.collapseButton : styles.expandButton
+            }
+            style={{
+              left: (lowerSiblingCounts.length - 0.7) * scaffoldBlockPxWidth,
+            }}
+            onClick={() =>
+              toggleChildrenVisibility({
+                node,
+                path,
+                treeIndex,
+              })
+            }
+          />
+        )}
 
         <div
           className={
             styles.rowWrapper +
             (!canDrag ? ` ${styles.rowWrapperDragDisabled}` : '')
-          }
-        >
+          }>
           {/* Set the row preview to be used during drag and drop */}
           {connectDragPreview(
             <div style={{ display: 'flex' }}>
@@ -141,20 +140,17 @@ class FileThemeNodeContentRenderer extends Component {
                 style={{
                   opacity: isDraggedDescendant ? 0.5 : 1,
                   ...style,
-                }}
-              >
+                }}>
                 <div
                   className={
                     styles.rowContents +
                     (!canDrag ? ` ${styles.rowContentsDragDisabled}` : '')
-                  }
-                >
+                  }>
                   <div className={styles.rowToolbar}>
                     {icons.map((icon, index) => (
                       <div
                         key={index} // eslint-disable-line react/no-array-index-key
-                        className={styles.toolbarButton}
-                      >
+                        className={styles.toolbarButton}>
                         {icon}
                       </div>
                     ))}
@@ -175,8 +171,7 @@ class FileThemeNodeContentRenderer extends Component {
                     {buttons.map((btn, index) => (
                       <div
                         key={index} // eslint-disable-line react/no-array-index-key
-                        className={styles.toolbarButton}
-                      >
+                        className={styles.toolbarButton}>
                         {btn}
                       </div>
                     ))}
@@ -187,11 +182,11 @@ class FileThemeNodeContentRenderer extends Component {
           )}
         </div>
       </div>
-    );
+    )
 
     return canDrag
       ? connectDragSource(nodeContent, { dropEffect: 'copy' })
-      : nodeContent;
+      : nodeContent
   }
 }
 
@@ -211,7 +206,7 @@ FileThemeNodeContentRenderer.defaultProps = {
   swapLength: null,
   title: null,
   toggleChildrenVisibility: null,
-};
+}
 
 FileThemeNodeContentRenderer.propTypes = {
   buttons: PropTypes.arrayOf(PropTypes.node),
@@ -248,6 +243,6 @@ FileThemeNodeContentRenderer.propTypes = {
   // Drop target
   canDrop: PropTypes.bool,
   isOver: PropTypes.bool.isRequired,
-};
+}
 
-export default FileThemeNodeContentRenderer;
+export default FileThemeNodeContentRenderer
