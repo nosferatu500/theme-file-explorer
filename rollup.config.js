@@ -44,6 +44,7 @@ function createDeclarationConfig(input, output) {
     acornInjectPlugins: [jsx()],
     plugins: [
       scss({
+        output: false,
         processor: () => postcss([autoprefixer()]),
       }),
       typescript({ declaration: true, outDir: output }),
@@ -59,6 +60,7 @@ function createESMConfig(input, output) {
     plugins: [
       nodeResolve({ extensions }),
       scss({
+        output: false,
         processor: () => postcss([autoprefixer()]),
       }),
       getEsbuild('node12'),
@@ -76,6 +78,7 @@ function createCommonJSConfig(input, output) {
     plugins: [
       nodeResolve({ extensions }),
       scss({
+        output: false,
         processor: () => postcss([autoprefixer()]),
       }),
       typescript(),

@@ -3,7 +3,7 @@
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import * as styles from './node-content-renderer.scss'
+import styles from './node-content-renderer.scss'
 
 function isDescendant(older, younger) {
   return (

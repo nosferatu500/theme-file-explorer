@@ -1,5 +1,8 @@
 # Change Log
 
+## 4.0.0-alpha.1
+* Fix build issue.
+
 ## 4.0.0-alpha.0
 * Migrate to Rollup.
 * Start migration to TS.

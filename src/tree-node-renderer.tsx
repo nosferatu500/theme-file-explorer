@@ -2,7 +2,7 @@
 
 import React, { Component, Children, cloneElement } from 'react'
 import PropTypes from 'prop-types'
-import * as styles from './tree-node-renderer.scss'
+import styles from './tree-node-renderer.scss'
 
 class FileThemeTreeNodeRenderer extends Component {
   render() {
