@@ -1,5 +1,8 @@
 # Change Log
 
+## 4.0.0-alpha.2
+* Fix export issue.
+
 ## 4.0.0-alpha.1
 * Fix build issue.
 
