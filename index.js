@@ -13,7 +13,7 @@
 import nodeContentRenderer from './node-content-renderer';
 import treeNodeRenderer from './tree-node-renderer';
 
-module.exports = {
+export default {
   nodeContentRenderer,
   treeNodeRenderer,
   scaffoldBlockPxWidth: 25,
