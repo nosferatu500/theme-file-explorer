@@ -8,7 +8,7 @@ function isDescendant(older, younger) {
     !!older.children &&
     typeof older.children !== 'function' &&
     older.children.some(
-      child => child === younger || isDescendant(child, younger)
+      (child) => child === younger || isDescendant(child, younger)
     )
   );
 }
@@ -95,27 +95,25 @@ class FileThemeNodeContentRenderer extends Component {
 
     const nodeContent = (
       <div style={{ height: '100%' }} {...otherProps}>
-        {toggleChildrenVisibility &&
-          node.children &&
-          node.children.length > 0 && (
-            <button
-              type="button"
-              aria-label={node.expanded ? 'Collapse' : 'Expand'}
-              className={
-                node.expanded ? styles.collapseButton : styles.expandButton
-              }
-              style={{
-                left: (lowerSiblingCounts.length - 0.7) * scaffoldBlockPxWidth,
-              }}
-              onClick={() =>
-                toggleChildrenVisibility({
-                  node,
-                  path,
-                  treeIndex,
-                })
-              }
-            />
-          )}
+        {toggleChildrenVisibility && node.children && node.children.length > 0 && (
+          <button
+            type="button"
+            aria-label={node.expanded ? 'Collapse' : 'Expand'}
+            className={
+              node.expanded ? styles.collapseButton : styles.expandButton
+            }
+            style={{
+              left: (lowerSiblingCounts.length - 0.7) * scaffoldBlockPxWidth,
+            }}
+            onClick={() =>
+              toggleChildrenVisibility({
+                node,
+                path,
+                treeIndex,
+              })
+            }
+          />
+        )}
 
         <div
           className={

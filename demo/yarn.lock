@@ -289,10 +289,10 @@
     react-dnd-html5-backend "^14.0.2"
     react-virtuoso "^2.2.1"
 
-"@nosferatu500/theme-file-explorer@^3.0.7":
-  version "3.0.7"
-  resolved "https://registry.yarnpkg.com/@nosferatu500/theme-file-explorer/-/theme-file-explorer-3.0.7.tgz#a2119d24a6b4d0e1a4ec564146ac18794c50ab3e"
-  integrity sha512-JE322V2ZloUm1IH0YEH3R+UOJ2e1EIiTVKMM32Btn6mcAe+V+JXZU6APSIY9xXS5h1o6IaP2QHLlK7Me6BMLzA==
+"@nosferatu500/theme-file-explorer@^3.0.8":
+  version "3.0.8"
+  resolved "https://registry.yarnpkg.com/@nosferatu500/theme-file-explorer/-/theme-file-explorer-3.0.8.tgz#a14ba9b9b66594e1ba36299eee9f4a02622b8e68"
+  integrity sha512-hCT1O+uJuFXRnoaVjQTU0gRtG/GCFVLKhukwcn8RdW4c+xCYCxi2FPxbVW7SxgFCwN7/0ODuyqsgPIveezxzZQ==
   dependencies:
     prop-types "^15.7.2"
     react-dnd "14.0.4"
@@ -341,10 +341,10 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@^17.0.26":
-  version "17.0.26"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.26.tgz#960ea4b3518cc154ed7df3b35656c508df653331"
-  integrity sha512-MXxuXrH2xOcv5cp/su4oz69dNQnSA90JjFw5HBd5wifw6Ihi94j7dRJm7qNsB30tnruXSCPc9qmlhGop4nh9Hw==
+"@types/react@^17.0.27":
+  version "17.0.27"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.27.tgz#6498ed9b3ad117e818deb5525fa1946c09f2e0e6"
+  integrity sha512-zgiJwtsggVGtr53MndV7jfiUESTqrbxOcBvwfe6KS/9bzaVPCTDieTWnFNecVNx6EAaapg5xsLLWFfHHR437AA==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -845,10 +845,10 @@ typescript@^4.4.3:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.3.tgz#bdc5407caa2b109efd4f82fe130656f977a29324"
   integrity sha512-4xfscpisVgqqDfPaJo5vkd+Qd/ItkoagnHpufr+i2QCHBsNYp+G7UAoyFl8aPtx879u38wPV65rZ8qbGZijalA==
 
-vite@^2.6.2:
-  version "2.6.2"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-2.6.2.tgz#5bbb4afe1f69ed9d6482e51a0f761f8cfc230e22"
-  integrity sha512-HSIg9U15LOnbD3CUxX364Pdrm7DUjftuBljowGxvkFHgDZU/SKPqApg9t86MX/Qq1VCO7wS+mGJHlfuTF7c0Sg==
+vite@^2.6.5:
+  version "2.6.5"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.6.5.tgz#c4d25972e2f7371e682da86828722ddf5126f3d1"
+  integrity sha512-vavXMChDUb4Oh4YunrK9BrH5Ox74cu0eOp0VuyI/iqFz1FqbWD72So2c9I87lLL2n0+6tFPV5ijow60KrtxuZg==
   dependencies:
     esbuild "^0.13.2"
     postcss "^8.3.8"

@@ -19,13 +19,11 @@ const fileLoader = {
 const postcssLoader = {
   loader: 'postcss-loader',
   options: {
-    postcssOptions: () => [
-      autoprefixer(),
-    ],
+    postcssOptions: () => [autoprefixer()],
   },
 };
 
-const cssLoader = isLocal => ({
+const cssLoader = (isLocal) => ({
   loader: 'css-loader',
   options: {
     modules: {
@@ -46,9 +44,7 @@ const config = {
     library: 'ReactSortableTreeThemeFileExplorer',
   },
   devtool: 'source-map',
-  plugins: [
-    new webpack.EnvironmentPlugin({ NODE_ENV: 'development' }),
-  ],
+  plugins: [new webpack.EnvironmentPlugin({ NODE_ENV: 'development' })],
   module: {
     rules: [
       {
@@ -87,7 +83,6 @@ switch (target) {
       use: [fileLoader],
       exclude: path.join(__dirname, 'node_modules'),
     });
-    config.entry = ['react-hot-loader/patch', './demo/index'];
     config.output = {
       path: path.join(__dirname, 'build'),
       filename: 'static/[name].js',
@@ -100,7 +95,9 @@ switch (target) {
       new webpack.EnvironmentPlugin({ NODE_ENV: 'development' }),
     ];
     config.devServer = {
-      contentBase: path.join(__dirname, 'build'),
+      static: {
+        contentBase: path.join(__dirname, 'build'),
+      },
       port: process.env.PORT || 3001,
       stats: 'minimal',
     };
