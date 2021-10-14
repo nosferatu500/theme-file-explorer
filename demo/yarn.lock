@@ -277,22 +277,22 @@
     hoist-non-react-statics "^3.3.2"
     lodash.throttle "^4.1.1"
 
-"@nosferatu500/react-sortable-tree@4.0.0-beta.1":
-  version "4.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@nosferatu500/react-sortable-tree/-/react-sortable-tree-4.0.0-beta.1.tgz#66f0b50d45a0582fa48c20d333e870488bc96a43"
-  integrity sha512-7HMDmSuDlWasRrk4SLYEmrId4w8o4aqWUvS6lDhxheek5+U7cH1gPolcAAqoqNyw8vO7sm+oKE44nuj72pYksw==
+"@nosferatu500/react-sortable-tree@4.0.0-beta.3":
+  version "4.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/@nosferatu500/react-sortable-tree/-/react-sortable-tree-4.0.0-beta.3.tgz#1635f44d921c4a595e4ba1188c2b0e7e38fb15d0"
+  integrity sha512-Kia95/4i4ejLeQvneIEFpONT05sJ4RdvFMkYKf64fMMSQXJlL3j+Y6ZgMd7BkNFTvSTMkiO2XFKAe6LL/18V4g==
   dependencies:
     "@nosferatu500/react-dnd-scrollzone" "^2.0.2"
     lodash.isequal "^4.5.0"
     prop-types "^15.7.2"
     react-dnd "^14.0.4"
     react-dnd-html5-backend "^14.0.2"
-    react-virtuoso "^2.2.1"
+    react-virtuoso "^2.2.2"
 
-"@nosferatu500/theme-file-explorer@^3.0.8":
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/@nosferatu500/theme-file-explorer/-/theme-file-explorer-3.0.8.tgz#a14ba9b9b66594e1ba36299eee9f4a02622b8e68"
-  integrity sha512-hCT1O+uJuFXRnoaVjQTU0gRtG/GCFVLKhukwcn8RdW4c+xCYCxi2FPxbVW7SxgFCwN7/0ODuyqsgPIveezxzZQ==
+"@nosferatu500/theme-file-explorer@^3.0.9":
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/@nosferatu500/theme-file-explorer/-/theme-file-explorer-3.0.9.tgz#6c92ede2a54c301cc3e93d9a6907eca2b8571626"
+  integrity sha512-85RV0xwy1d0FWGU1zUXmXE1rNXXb4YU3mBsxqY7lnG42+OrmGtSZMBzRF4dj22u6crCUGfZSYkPY4uiOV9P4GA==
   dependencies:
     prop-types "^15.7.2"
     react-dnd "14.0.4"
@@ -341,10 +341,10 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@^17.0.27":
-  version "17.0.27"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.27.tgz#6498ed9b3ad117e818deb5525fa1946c09f2e0e6"
-  integrity sha512-zgiJwtsggVGtr53MndV7jfiUESTqrbxOcBvwfe6KS/9bzaVPCTDieTWnFNecVNx6EAaapg5xsLLWFfHHR437AA==
+"@types/react@^17.0.29":
+  version "17.0.29"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.29.tgz#9535f3fc01a4981ce9cadcf0daa2593c0c2f2251"
+  integrity sha512-HSenIfBEBZ70BLrrVhtEtHpqaP79waauPtA8XKlczTxL3hXrW/ElGNLTpD1TmqkykgGlOAK55+D3SmUHEirpFw==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -757,10 +757,10 @@ react-refresh@^0.10.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.10.0.tgz#2f536c9660c0b9b1d500684d9e52a65e7404f7e3"
   integrity sha512-PgidR3wST3dDYKr6b4pJoqQFpPGNKDSCDx4cZoshjXipw3LzO7mG1My2pwEzz2JVkF+inx3xRpDeQLFQGH/hsQ==
 
-react-virtuoso@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/react-virtuoso/-/react-virtuoso-2.2.1.tgz#a15dbd864745011a011ac5ee75be3c523fcb8ded"
-  integrity sha512-kS+9mns4slmpsUSQA/sIUjDwf9cA17Il8dvslHTuS5SpxCo7iRJIKJpjZd1ilLpvX3wYAYObbHVR3BxnUWRPfg==
+react-virtuoso@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/react-virtuoso/-/react-virtuoso-2.2.2.tgz#d6b3d7d80a9d7377bb90de1dc46f32f5a1cf3739"
+  integrity sha512-ESwiOyliO/0q58P1X9e3IQosIKWmCv0JYO/ZDeLxh2O0FNWPQlXC5xgRT2fVxMXPoi+EaNI671foJuqOOITrOg==
   dependencies:
     "@virtuoso.dev/react-urx" "^0.2.5"
     "@virtuoso.dev/urx" "^0.2.5"
@@ -840,15 +840,15 @@ to-fast-properties@^2.0.0:
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
   integrity sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=
 
-typescript@^4.4.3:
-  version "4.4.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.3.tgz#bdc5407caa2b109efd4f82fe130656f977a29324"
-  integrity sha512-4xfscpisVgqqDfPaJo5vkd+Qd/ItkoagnHpufr+i2QCHBsNYp+G7UAoyFl8aPtx879u38wPV65rZ8qbGZijalA==
+typescript@^4.4.4:
+  version "4.4.4"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.4.tgz#2cd01a1a1f160704d3101fd5a58ff0f9fcb8030c"
+  integrity sha512-DqGhF5IKoBl8WNf8C1gu8q0xZSInh9j1kJJMqT3a94w1JzVaBU4EXOSMrz9yDqMT0xt3selp83fuFMQ0uzv6qA==
 
-vite@^2.6.5:
-  version "2.6.5"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-2.6.5.tgz#c4d25972e2f7371e682da86828722ddf5126f3d1"
-  integrity sha512-vavXMChDUb4Oh4YunrK9BrH5Ox74cu0eOp0VuyI/iqFz1FqbWD72So2c9I87lLL2n0+6tFPV5ijow60KrtxuZg==
+vite@^2.6.7:
+  version "2.6.7"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-2.6.7.tgz#e15c1d8327950720b5d7c4ec3fb36a5a58ccf7cb"
+  integrity sha512-ewk//jve9k6vlU8PfJmWUHN8k0YYdw4VaKOMvoQ3nT2Pb6k5OSMKQi4jPOzVH/TlUqMsCrq7IJ80xcuDDVyigg==
   dependencies:
     esbuild "^0.13.2"
     postcss "^8.3.8"
