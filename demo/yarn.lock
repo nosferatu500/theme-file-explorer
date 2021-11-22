@@ -277,10 +277,10 @@
     hoist-non-react-statics "^3.3.2"
     lodash.throttle "^4.1.1"
 
-"@nosferatu500/react-sortable-tree@4.0.0-beta.3":
-  version "4.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@nosferatu500/react-sortable-tree/-/react-sortable-tree-4.0.0-beta.3.tgz#1635f44d921c4a595e4ba1188c2b0e7e38fb15d0"
-  integrity sha512-Kia95/4i4ejLeQvneIEFpONT05sJ4RdvFMkYKf64fMMSQXJlL3j+Y6ZgMd7BkNFTvSTMkiO2XFKAe6LL/18V4g==
+"@nosferatu500/react-sortable-tree@4.0.0-beta.5":
+  version "4.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/@nosferatu500/react-sortable-tree/-/react-sortable-tree-4.0.0-beta.5.tgz#2b403fb3c4a29d2765c7a99bb0e7b2a8627e9970"
+  integrity sha512-c5PkejuWOVOmOOmtd5zcFucFuwMQut03U4FZFq6JCPpsQVTDS6UFnMIOp/UD+1jGOXYS8Ctlw66fZTXz9c2Mvw==
   dependencies:
     "@nosferatu500/react-dnd-scrollzone" "^2.0.2"
     lodash.isequal "^4.5.0"
@@ -289,10 +289,10 @@
     react-dnd-html5-backend "^14.0.2"
     react-virtuoso "^2.2.2"
 
-"@nosferatu500/theme-file-explorer@^3.0.9":
-  version "3.0.9"
-  resolved "https://registry.yarnpkg.com/@nosferatu500/theme-file-explorer/-/theme-file-explorer-3.0.9.tgz#6c92ede2a54c301cc3e93d9a6907eca2b8571626"
-  integrity sha512-85RV0xwy1d0FWGU1zUXmXE1rNXXb4YU3mBsxqY7lnG42+OrmGtSZMBzRF4dj22u6crCUGfZSYkPY4uiOV9P4GA==
+"@nosferatu500/theme-file-explorer@^3.0.10":
+  version "3.0.10"
+  resolved "https://registry.yarnpkg.com/@nosferatu500/theme-file-explorer/-/theme-file-explorer-3.0.10.tgz#d678ba21e8367a8e7c6be6e87f5f35d28dd0b6e6"
+  integrity sha512-cf/3mQCB3/gu4Xfp6PS86k5R9CFs2hrhiVUwvsATeRX/w3y/rznuk0tFv6tadAicALhofMdfZTU3kQgvf828jQ==
   dependencies:
     prop-types "^15.7.2"
     react-dnd "14.0.4"
