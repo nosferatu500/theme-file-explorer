@@ -1,6 +1,6 @@
 {
   "name": "@nosferatu500/theme-file-explorer",
-  "version": "3.0.11",
+  "version": "3.0.12",
   "description": "File explorer theme for react-sortable-tree",
   "scripts": {
     "build": "yarn clean && cross-env NODE_ENV=production TARGET=umd webpack --bail",
@@ -32,50 +32,54 @@
   },
   "license": "MIT",
   "dependencies": {
-    "prop-types": "^15.7.2",
+    "prop-types": "^15.8.0",
     "react-dnd": "14.0.4"
   },
   "peerDependencies": {
-    "@nosferatu500/react-sortable-tree": "4.0.1",
+    "@nosferatu500/react-sortable-tree": "4.0.2",
     "react": ">=17.0.2",
     "react-dom": ">=17.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.4",
-    "@babel/preset-react": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
     "autoprefixer": "^10.4.0",
     "babel-loader": "^8.2.3",
     "cross-env": "^7.0.3",
     "css-loader": "^6.5.1",
-    "eslint": "^8.3.0",
-    "eslint-config-airbnb": "^19.0.0",
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb": "^19.0.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react": "^7.28.0",
     "html-webpack-plugin": "^5.5.0",
-    "node-sass": "^6.0.1",
-    "postcss-loader": "^6.2.0",
-    "prettier": "^2.4.1",
+    "node-sass": "^7.0.0",
+    "postcss-loader": "^6.2.1",
+    "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rimraf": "^3.0.2",
-    "sass-loader": "^12.3.0",
+    "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
-    "webpack": "^5.64.2",
+    "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.5.0",
+    "webpack-dev-server": "^4.7.1",
     "webpack-node-externals": "^3.0.0"
   },
   "keywords": [
     "react",
     "react-component"
   ],
+  "engines": {
+    "node": ">=16"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
       "not dead",
+      "not ie <= 11",
       "not op_mini all"
     ],
     "development": [

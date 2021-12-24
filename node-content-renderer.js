@@ -45,6 +45,7 @@ class FileThemeNodeContentRenderer extends Component {
       isOver, // Not needed, but preserved for other renderers
       parentNode, // Needed for dndManager
       rowDirection,
+      rowHeight,
       ...otherProps
     } = this.props;
     const nodeTitle = title || node.title;
@@ -234,6 +235,7 @@ FileThemeNodeContentRenderer.propTypes = {
   treeIndex: PropTypes.number.isRequired,
   treeId: PropTypes.string.isRequired,
   rowDirection: PropTypes.string.isRequired,
+  rowHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.func]),
 
   // Drag and drop API functions
   // Drag source

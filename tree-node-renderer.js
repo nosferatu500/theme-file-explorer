@@ -21,6 +21,7 @@ class FileThemeTreeNodeRenderer extends Component {
       getPrevRow, // Delete from otherProps
       node, // Delete from otherProps
       path, // Delete from otherProps
+      rowHeight,
       rowDirection,
       ...otherProps
     } = this.props;
@@ -37,6 +38,7 @@ class FileThemeTreeNodeRenderer extends Component {
             swapFrom,
             swapLength,
             swapDepth,
+            rowHeight,
           })
         )}
       </div>
@@ -49,6 +51,7 @@ FileThemeTreeNodeRenderer.defaultProps = {
   swapDepth: null,
   swapLength: null,
   canDrop: false,
+  rowHeight: 25,
   draggedNode: null,
 };
 
@@ -77,6 +80,7 @@ FileThemeTreeNodeRenderer.propTypes = {
     PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   ).isRequired,
   rowDirection: PropTypes.string.isRequired,
+  rowHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.func])
 };
 
 export default FileThemeTreeNodeRenderer;
