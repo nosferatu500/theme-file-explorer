@@ -27,7 +27,7 @@ class FileThemeTreeNodeRenderer extends Component {
     } = this.props;
 
     return connectDropTarget(
-      <div {...otherProps} className={styles.node}>
+      <div {...otherProps} className={styles.node} ref={(node) => (this.node = node)}>
         {Children.map(children, (child) =>
           cloneElement(child, {
             isOver,
