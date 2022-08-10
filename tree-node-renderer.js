@@ -22,7 +22,7 @@ class FileThemeTreeNodeRenderer extends Component {
       node, // Delete from otherProps
       path, // Delete from otherProps
       rowHeight,
-      rowDirection,
+      disableDropFromOutside,
       ...otherProps
     } = this.props;
 
@@ -53,6 +53,7 @@ FileThemeTreeNodeRenderer.defaultProps = {
   canDrop: false,
   rowHeight: 25,
   draggedNode: null,
+  disableDropFromOutside: false,
 };
 
 FileThemeTreeNodeRenderer.propTypes = {
@@ -79,7 +80,7 @@ FileThemeTreeNodeRenderer.propTypes = {
   path: PropTypes.arrayOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   ).isRequired,
-  rowDirection: PropTypes.string.isRequired,
+  disableDropFromOutside: PropTypes.bool,
   rowHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.func])
 };
 

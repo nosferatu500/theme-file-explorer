@@ -1,6 +1,6 @@
 {
   "name": "@nosferatu500/theme-file-explorer",
-  "version": "3.0.19",
+  "version": "3.0.21",
   "description": "File explorer theme for react-sortable-tree",
   "scripts": {
     "build": "yarn clean && cross-env NODE_ENV=production TARGET=umd webpack --bail",

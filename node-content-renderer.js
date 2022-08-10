@@ -44,7 +44,7 @@ class FileThemeNodeContentRenderer extends Component {
       treeId, // Not needed, but preserved for other renderers
       isOver, // Not needed, but preserved for other renderers
       parentNode, // Needed for dndManager
-      rowDirection,
+      disableDropFromOutside,
       rowHeight,
       ...otherProps
     } = this.props;
@@ -210,6 +210,7 @@ FileThemeNodeContentRenderer.defaultProps = {
   swapLength: null,
   title: null,
   toggleChildrenVisibility: null,
+  disableDropFromOutside: false,
 };
 
 FileThemeNodeContentRenderer.propTypes = {
@@ -234,7 +235,7 @@ FileThemeNodeContentRenderer.propTypes = {
   toggleChildrenVisibility: PropTypes.func,
   treeIndex: PropTypes.number.isRequired,
   treeId: PropTypes.string.isRequired,
-  rowDirection: PropTypes.string.isRequired,
+  disableDropFromOutside: PropTypes.bool,
   rowHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.func]),
 
   // Drag and drop API functions
